@@ -1,0 +1,82 @@
+.resultContainer {
+    background: linear-gradient(145deg, #ffd54f, #ffeb3b); /* Subtle gradient */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 1px 3px rgba(255, 255, 255, 0.3); /* Outer shadow */
+    padding: 30px 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .gameStatus {
+    color: #37474f; /* Darker color for contrast */
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cound {
+    margin-bottom: 15px;
+    color: #424242;
+    font-size: 1.2rem;
+  }
+  
+  button {
+    background-color:#2e2d2b; /* Vibrant orange button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color:#2e2d2b;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Slight lift */
+  }
+  
+  button:active {
+    background-color:#2e2d2b;
+    transform: translateY(0); /* Reset lift */
+  }
+  
+  /* Add fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Make container responsive */
+  @media (max-width: 768px) {
+    .resultContainer {
+      padding: 20px 10px;
+      font-size: 0.9rem;
+    }
+  
+    .gameStatus {
+      font-size: 1.5rem;
+    }
+  
+    .cound {
+      font-size: 1rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
