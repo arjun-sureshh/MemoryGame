@@ -124,7 +124,8 @@ export default class App extends PureComponent {
     // Add the clicked card to revealedImages
     const updatedRevealedImages = [...revealedImages, { image, index }];
     this.setState({ revealedImages: updatedRevealedImages });
-
+    
+    
     // Check if two cards are now revealed
     if (updatedRevealedImages.length === 2) {
       const [first, second] = updatedRevealedImages;
@@ -194,7 +195,7 @@ export default class App extends PureComponent {
             height: '100%',
             position: 'relative',
             transformStyle: 'preserve-3d', // Enables 3D transform
-            transition: 'transform 0.6s', // Smooth animation
+            transition: 'transform 0.5s', // Smooth animation
           }}
           onClick={() => this.handleClick(image, index)}
         >
@@ -204,7 +205,6 @@ export default class App extends PureComponent {
               position: 'absolute',
               width: '100%',
               height: '100%',
-              backfaceVisibility: 'hidden', // Hides back face when flipped
               backgroundColor: 'transparent',
             }}
           >
@@ -266,7 +266,7 @@ export default class App extends PureComponent {
               <h6>Moves : </h6> {moves}
             </div>
               <div>
-                <h6>Max-move:30</h6>
+                <h6>Max-move:32</h6>
               </div>
             </div>
             <div className={`${styles.timer} d-flex`}> <h6>Timer :</h6> {Math.floor(this.state.timerInterval / 60)}m {this.state.timerInterval % 60}s </div>
